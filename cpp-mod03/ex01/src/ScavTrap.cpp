@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:46:06 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 15:38:28 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/01 16:41:21 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,16 @@ ScavTrap::~ScavTrap()
 void ScavTrap::guardGate(void)
 {
 	std::cout << "ScavTrap guardGate activated!" << std::endl;
+}
+
+void ScavTrap::attack(const std::string& target)
+{
+	if (getHitPoints() <= 0 || getEnergyPoints() <= 0)
+	{
+		std::cout << getName() << " is already dead!!! " << std::endl;
+		return;
+	}
+
+	std::cout << "ScavTrap " << getName() << " attacks " << target << ", causing " << getAttackDamage() << " points of damage!" << std::endl;
+	setEnergyPoints(getEnergyPoints() - 1);
 }

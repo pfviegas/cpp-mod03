@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:52 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 16:04:29 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/01 17:35:53 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 ClapTrap::ClapTrap()
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
-	setName("No Name");
-	setHitPoints(10);
-	setEnergyPoints(10);
-	setAttackDamage(0);	
 }
 
 // Parameterized Constructor

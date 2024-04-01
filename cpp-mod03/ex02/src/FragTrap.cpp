@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:46:06 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 15:54:52 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/01 17:21:15 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,5 @@ FragTrap::~FragTrap()
 //Member functions
 void FragTrap::highFivesGuys()
 {
-	std::cout << "High Five Time!!!" << std::endl;
+	std::cout << "FragTrap: " << getName() << " High Five Time!!!" << std::endl;
 }

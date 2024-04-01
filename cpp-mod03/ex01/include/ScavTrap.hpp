@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:44 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 15:38:18 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/01 16:41:21 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap : public ClapTrap
 		~ScavTrap();
 
 		void guardGate();
+		void attack(const std::string& target);
 };
 
 #endif
