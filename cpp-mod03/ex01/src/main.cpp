@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/01 11:45:59 by pviegas           #+#    #+#             */
+/*   Updated: 2024/04/01 15:57:51 by pviegas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../include/ScavTrap.hpp"
 
@@ -38,21 +48,9 @@ int main()
 	scav1.attack("SC4V-TP2");
 	std::cout << std::endl;
 
-	// clap2.attack("Athena");
-	// std::cout << std::endl;
-
-	// clap2.setName("Mad Moxxi");
-	// std::cout << std::endl;
-
-	// clap3.takeDamage(30);
-	// std::cout << std::endl;
-
-	// clap3.beRepaired(15);
-	// std::cout << std::endl;
-
 	std::cout << "ClapTrap " << clap1.getName() << " have Hit Points: " << clap1.getHitPoints() << ", Energy Points: " << clap1.getEnergyPoints() << ", Attack Points: " << clap1.getAttackDamage() << std::endl;
-	std::cout << "ClapTrap " << scav1.getName() << " have Hit Points: " << scav1.getHitPoints() << ", Energy Points: " << scav1.getEnergyPoints() << ", Attack Points: " << scav1.getAttackDamage() << std::endl;
-	std::cout << "ClapTrap " << scav2.getName() << " have Hit Points: " << scav2.getHitPoints() << ", Energy Points: " << scav2.getEnergyPoints() << ", Attack Points: " << scav2.getAttackDamage() << std::endl;
+	std::cout << "ScavTrap " << scav1.getName() << " have Hit Points: " << scav1.getHitPoints() << ", Energy Points: " << scav1.getEnergyPoints() << ", Attack Points: " << scav1.getAttackDamage() << std::endl;
+	std::cout << "ScavTrap " << scav2.getName() << " have Hit Points: " << scav2.getHitPoints() << ", Energy Points: " << scav2.getEnergyPoints() << ", Attack Points: " << scav2.getAttackDamage() << std::endl;
 	std::cout << std::endl;
 	
 	return 0;
