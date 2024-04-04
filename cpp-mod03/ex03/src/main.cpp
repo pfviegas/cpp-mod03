@@ -3,55 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:59 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 15:57:25 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/04 01:16:13 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ScavTrap.hpp"
-#include "../include/FragTrap.hpp"
+#include "../include/DiamondTrap.hpp"
 
 int main()
 {
 
-	ClapTrap clap1("Mad Moxxi");
+	DiamondTrap d1("Diamond1");
 	std::cout << std::endl;
 
-	FragTrap frag1("FRAG-TP1");
+	DiamondTrap d2("Diamond1");
 	std::cout << std::endl;
 
-	frag1.highFivesGuys();
+	DiamondTrap d3(d1);
+	std::cout << std::endl;
+ 
+	d1.highFivesGuys();
+	d1.guardGate();
+	d1.whoAmI();
+	d1.attack("FORD");	
 	std::cout << std::endl;
 	
-	FragTrap frag2(frag1);
-	frag2.setName("FRAG-TP2");
-	frag2.beRepaired(2);
-	frag2.setAttackDamage(500);
+	d2.whoAmI();
+	d2.attack("ARTHUR");
 	std::cout << std::endl;
 	
-	frag2.attack("SC4V-TP");
+	d3.whoAmI();
 	std::cout << std::endl;
 
-	frag1.takeDamage(500);
-	std::cout << std::endl;
-
-	frag2.ClapTrap::attack("Mad Moxxi");
-	std::cout << std::endl;
-	
-	clap1.takeDamage(500);
-	std::cout << std::endl;
-
-	clap1.attack("SC4V-TP2");
-	std::cout << std::endl;
-
-	frag1.attack("SC4V-TP2");
-	std::cout << std::endl;
-
-	std::cout << "ClapTrap " << clap1.getName() << " have Hit Points: " << clap1.getHitPoints() << ", Energy Points: " << clap1.getEnergyPoints() << ", Attack Points: " << clap1.getAttackDamage() << std::endl;
-	std::cout << "FragTrap " << frag1.getName() << " have Hit Points: " << frag1.getHitPoints() << ", Energy Points: " << frag1.getEnergyPoints() << ", Attack Points: " << frag1.getAttackDamage() << std::endl;
-	std::cout << "FragTrap " << frag2.getName() << " have Hit Points: " << frag2.getHitPoints() << ", Energy Points: " << frag2.getEnergyPoints() << ", Attack Points: " << frag2.getAttackDamage() << std::endl;
+	std::cout << "DiamondTrap " << d1.getName() << " have Hit Points: " << d1.getHitPoints() << ", Energy Points: " << d1.getEnergyPoints() << ", Attack Points: " << d1.getAttackDamage() << std::endl;
+	std::cout << "DiamondTrap " << d2.getName() << " have Hit Points: " << d2.getHitPoints() << ", Energy Points: " << d2.getEnergyPoints() << ", Attack Points: " << d2.getAttackDamage() << std::endl;
+	std::cout << "DiamondTrap " << d3.getName() << " have Hit Points: " << d3.getHitPoints() << ", Energy Points: " << d3.getEnergyPoints() << ", Attack Points: " << d3.getAttackDamage() << std::endl;
 	std::cout << std::endl;
 	
 	return 0;
