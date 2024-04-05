@@ -19,13 +19,14 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap()
 }
 
 // Parameterized Constructor
-DiamondTrap::DiamondTrap(std::string name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name), FragTrap(name)
 {
 	std::cout << "DiamondTrap: Parameterized constructor called" << std::endl;
 	setName(name);
-	setHitPoints(100);
-	setEnergyPoints(50);
-	setAttackDamage(20);
+	ClapTrap::setName(name + "_clap_name");
+	setHitPoints(FragTrap::getHitPoints());
+	setEnergyPoints(ScavTrap::getEnergyPoints());
+	setAttackDamage(FragTrap::getAttackDamage());
 }
 
 // Copy Constructor
@@ -42,6 +43,9 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 	{
 		std::cout << "DiamondTrap: Assignment operator called" << std::endl;
 		ClapTrap::operator=(other);
+		ScavTrap::operator=(other);
+		FragTrap::operator=(other);
+		_name = other._name;
 	}
 	return (*this);
 }

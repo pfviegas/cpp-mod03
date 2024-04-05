@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+         #
+#    By: paulo <paulo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/01 11:46:31 by pviegas           #+#    #+#              #
-#    Updated: 2024/04/01 16:53:18 by pviegas          ###   ########.fr        #
+#    Updated: 2024/04/05 11:26:50 by paulo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ NAME = DiamondTrap
 
 # Compiler options
 CXX = c++
-CXXFLAGS = -Werror -Wall -Wextra -std=c++98  -g #-fsanitize=address
+CXXFLAGS = -Werror -Wall -Wextra -Wshadow -std=c++98  -g #-fsanitize=address
 
 # Paths
 SRC_DIR = src/
