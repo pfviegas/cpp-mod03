@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:35 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 11:45:39 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/08 17:29:00 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class ClapTrap
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 
-	private:
+	protected:
 		std::string	_name;
 		int	_hitPoints;
 		int	_energyPoints;

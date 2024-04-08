@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:59 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/05 11:11:06 by paulo            ###   ########.fr       */
+/*   Updated: 2024/04/08 16:51:53 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 
 int main()
 {
-
 	DiamondTrap d1("Diamond1");
 	std::cout << std::endl;
-/*
-	DiamondTrap d2("Diamond1");
+	DiamondTrap d2(d1);
 	std::cout << std::endl;
 
-	DiamondTrap d3(d1);
+	ScavTrap s1("Scav1");
+//	d1.setEnergyPoints(s1.getEnergyPoints());
+	d2.setName("Diamond2");
+//	d2.setEnergyPoints(s1.getEnergyPoints());
 	std::cout << std::endl;
- 
 	d1.highFivesGuys();
-	d1.guardGate();
+	d2.guardGate();
 	d1.whoAmI();
+	d2.whoAmI();
+	std::cout << std::endl;
+/*
 	d1.attack("FORD");	
 	std::cout << std::endl;
 	
@@ -34,13 +37,10 @@ int main()
 	d2.attack("ARTHUR");
 	std::cout << std::endl;
 	
-	d3.whoAmI();
-	std::cout << std::endl;
 */
 
 	std::cout << "DiamondTrap " << d1.getName() << " have Hit Points: " << d1.getHitPoints() << ", Energy Points: " << d1.getEnergyPoints() << ", Attack Points: " << d1.getAttackDamage() << std::endl;
-//	std::cout << "DiamondTrap " << d2.getName() << " have Hit Points: " << d2.getHitPoints() << ", Energy Points: " << d2.getEnergyPoints() << ", Attack Points: " << d2.getAttackDamage() << std::endl;
-//	std::cout << "DiamondTrap " << d3.getName() << " have Hit Points: " << d3.getHitPoints() << ", Energy Points: " << d3.getEnergyPoints() << ", Attack Points: " << d3.getAttackDamage() << std::endl;
+	std::cout << "DiamondTrap " << d2.getName() << " have Hit Points: " << d2.getHitPoints() << ", Energy Points: " << d2.getEnergyPoints() << ", Attack Points: " << d2.getAttackDamage() << std::endl;
 	std::cout << std::endl;
 	
 	return 0;
