@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:52 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 17:35:36 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/09 13:43:25 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << getName() << " takes " << amount << " points of damage!" << std::endl;
 		setHitPoints(getHitPoints() - amount);
 		if (getHitPoints() <= 0)
-			std::cout << "ClapTrap " << getName() << " is destroyed!!! " << std::endl;
+			std::cout << "ClapTrap " << getName() << " was destroyed!!! " << std::endl;
 	}
 }
 

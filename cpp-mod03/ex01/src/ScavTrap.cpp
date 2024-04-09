@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:46:06 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 16:41:21 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/09 15:22:55 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ ScavTrap::~ScavTrap()
 //Member functions
 void ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap guardGate activated!" << std::endl;
+	std::cout << "ScavTrap is now in Gate keeper mode!" << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target)

@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:03 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 11:45:06 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/09 10:47:09 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,17 @@ int main()
 	std::cout << std::endl;
 	
 	claptrap1.attack("Athena");
-	std::cout << std::endl;
-
-	claptrap2.takeDamage(20);
+	claptrap3.takeDamage(claptrap1.getAttackDamage());
 	std::cout << std::endl;
 
 	claptrap2.attack("Athena");
+	claptrap3.takeDamage(claptrap2.getAttackDamage());
 	std::cout << std::endl;
 
 	claptrap2.setName("Mad Moxxi");
 	std::cout << std::endl;
 
-	claptrap3.takeDamage(30);
-	std::cout << std::endl;
-
-	claptrap3.beRepaired(15);
+	claptrap2.beRepaired(15);
 	std::cout << std::endl;
 
 	std::cout << "ClapTrap " << claptrap1.getName() << " have Hit Points: " << claptrap1.getHitPoints() << ", Energy Points: " << claptrap1.getEnergyPoints() << ", Attack Points: " << claptrap1.getAttackDamage() << std::endl;

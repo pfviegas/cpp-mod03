@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:44:55 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 17:35:20 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/09 10:47:59 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (getHitPoints() <= 0 || getEnergyPoints() <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " is already destroyed!!!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is already out of service!!!" << std::endl;
 		return;
 	}
 
@@ -118,7 +118,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (getHitPoints() <= 0 || getEnergyPoints() <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " is already destroyed!!!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is already out of service!!!" << std::endl;
 		return;
 	}
 	if (getHitPoints() and getEnergyPoints())
@@ -126,7 +126,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << getName() << " takes " << amount << " points of damage!" << std::endl;
 		setHitPoints(getHitPoints() - amount);
 		if (getHitPoints() <= 0)
-			std::cout << "ClapTrap " << getName() << " is destroyed!!! " << std::endl;
+			std::cout << "ClapTrap " << getName() << " was destroyed!!! " << std::endl;
 	}
 }
 
@@ -134,7 +134,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (getHitPoints() <= 0 || getEnergyPoints() <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " is already destroyed!!!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " couldn't be repaired!!!" << std::endl;
 		return;
 	}
 	if (getHitPoints() and getEnergyPoints())
