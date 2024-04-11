@@ -19,12 +19,12 @@ DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap()
 }
 
 // Parameterized Constructor
-DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name  + "_clap_name"), FragTrap(name + "_clap_name")
 {
 	std::cout << "DiamondTrap: Parameterized constructor called" << std::endl;
-	setName(name + "_clap_name");
+	setName(name);
 	setHitPoints(FragTrap::getHitPoints());
-	setEnergyPoints(ScavTrap::getEnergyPoints());
+	setEnergyPoints(ScavTrap::_Energy_Points);
 	setAttackDamage(FragTrap::getAttackDamage());
 }
 
@@ -57,5 +57,5 @@ DiamondTrap::~DiamondTrap()
 //Member functions
 void DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap: My name is " << this->_name << " and my ClapTrap name is " << getName() << std::endl;
+	std::cout << "DiamondTrap: My name is " << this->_name << " and my ClapTrap name is " << ClapTrap::getName() << std::endl;
 }
