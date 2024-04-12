@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:52 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/09 13:43:25 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/12 12:25:57 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,25 +79,25 @@ int ClapTrap::getAttackDamage(void) const
 // Setters
 void ClapTrap::setName(const std::string name)
 {
-	std::cout << "ClapTrap " << this->_name << " set his name to " << name << "."<< std::endl;
+	std::cout << this->_name << " set his name to " << name << "."<< std::endl;
 	this->_name = name;
 }
 
 void ClapTrap::setHitPoints(const int hitPoints)
 {
-	std::cout << "ClapTrap " << this->_name << " set Hit Points to " << hitPoints << "."<< std::endl;
+	std::cout << this->_name << " set Hit Points to " << hitPoints << "."<< std::endl;
 	this->_hitPoints = hitPoints;
 }
 
 void ClapTrap::setEnergyPoints(const int energyPoints)
 {
-	std::cout << "ClapTrap " << this->_name << " set Energy Points to " << energyPoints << "."<< std::endl;
+	std::cout << this->_name << " set Energy Points to " << energyPoints << "."<< std::endl;
 	this->_energyPoints = energyPoints;
 }
 
 void ClapTrap::setAttackDamage(const int attackDamage)
 {
-	std::cout << "ClapTrap " << this->_name << " set Attack Damage to " << attackDamage << " Points."<< std::endl;
+	std::cout << this->_name << " set Attack Damage to " << attackDamage << " Points."<< std::endl;
 	this->_attackDamage = attackDamage;
 }
 
@@ -106,11 +106,11 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (getHitPoints() <= 0 || getEnergyPoints() <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " is already destroyed!!!" << std::endl;
+		std::cout << this->_name << " is already destroyed!!!" << std::endl;
 		return;
 	}
 
-	std::cout << "ClapTrap " << getName() << " attacks " << target << ", causing " << getAttackDamage() << " points of damage!" << std::endl;
+	std::cout << getName() << " attacks " << target << ", causing " << getAttackDamage() << " points of damage!" << std::endl;
 	setEnergyPoints(getEnergyPoints() - 1);
 }
 
@@ -118,15 +118,15 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (getHitPoints() <= 0 || getEnergyPoints() <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " is already destroyed!!!" << std::endl;
+		std::cout << this->_name << " is already destroyed!!!" << std::endl;
 		return;
 	}
 	if (getHitPoints() and getEnergyPoints())
 	{
-		std::cout << "ClapTrap " << getName() << " takes " << amount << " points of damage!" << std::endl;
+		std::cout << getName() << " takes " << amount << " points of damage!" << std::endl;
 		setHitPoints(getHitPoints() - amount);
 		if (getHitPoints() <= 0)
-			std::cout << "ClapTrap " << getName() << " was destroyed!!! " << std::endl;
+			std::cout << getName() << " was destroyed!!! " << std::endl;
 	}
 }
 
@@ -134,12 +134,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (getHitPoints() <= 0 || getEnergyPoints() <= 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " is already destroyed!!!" << std::endl;
+		std::cout << this->_name << " is already destroyed!!!" << std::endl;
 		return;
 	}
 	if (getHitPoints() and getEnergyPoints())
 	{
-		std::cout << "ClapTrap " << this->_name << " get " << amount << " health points!" << std::endl;
+		std::cout << this->_name << " get " << amount << " health points!" << std::endl;
 		setHitPoints(getHitPoints() + amount);
 		setEnergyPoints(getEnergyPoints() - 1);
 	}

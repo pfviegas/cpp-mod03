@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:59 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/01 15:57:25 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/12 13:16:27 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,12 @@ int main()
 	frag2.setAttackDamage(500);
 	std::cout << std::endl;
 	
-	frag2.attack("SC4V-TP");
-	std::cout << std::endl;
-
-	frag1.takeDamage(500);
+	frag2.attack("FRAG-TP1");
+	frag1.takeDamage(frag2.getAttackDamage());
 	std::cout << std::endl;
 
 	frag2.ClapTrap::attack("Mad Moxxi");
-	std::cout << std::endl;
-	
-	clap1.takeDamage(500);
+	clap1.takeDamage(frag2.getAttackDamage());
 	std::cout << std::endl;
 
 	clap1.attack("SC4V-TP2");

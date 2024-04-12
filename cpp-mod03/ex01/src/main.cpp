@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:45:59 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/09 15:43:36 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/12 12:16:16 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,22 @@ int main()
 	
 	ScavTrap scav2(scav1);
 	scav2.setName("SC4V-TP2");
-	scav2.beRepaired(10);		// Use 1 Energy Point
+	scav2.beRepaired(10);
 	scav2.setAttackDamage(50);
 	std::cout << std::endl;
 	
-	scav2.attack("SC4V-TP");	// Use 1 Energy Point
+	scav2.attack("SC4V-TP");
 	scav1.takeDamage(scav2.getAttackDamage());
 	std::cout << std::endl;
 
-	scav2.ClapTrap::attack("Mad Moxxi");	// Use 1 Energy Point
+	scav2.ClapTrap::attack("Mad Moxxi");
 	clap1.takeDamage(scav2.getAttackDamage());;
 	std::cout << std::endl;
 	
-	clap1.attack("SC4V-TP2");	// Use 1 Energy Point
+	clap1.attack("SC4V-TP2");
 	std::cout << std::endl;
 
-	scav1.attack("SC4V-TP2");	// Use 1 Energy Point
+	scav1.attack("SC4V-TP2");
 	scav2.takeDamage(scav1.getAttackDamage());
 	std::cout << std::endl;
 
